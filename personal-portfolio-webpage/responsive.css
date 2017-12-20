@@ -16,7 +16,7 @@
   .scroll-top{
     visibility: hidden;
   }
-  nav{
+  #navbar{
     float: right;
     margin: 20px;
   }

@@ -30,8 +30,9 @@ a{
   margin: 15px;
 
 }
-nav{
+#navbar{
   background-color: rgb(117, 42, 96);
+  margin: 0;
 }
 #navbar ul{
   text-align: center;
@@ -39,6 +40,9 @@ nav{
 .nav li{
   display: inline-block;
   text-transform: uppercase;
+}
+.nav-items a:focus {
+  background-color: #eee;
 }
 section{
   background-color: #eee;
