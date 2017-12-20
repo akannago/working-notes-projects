@@ -1,0 +1,62 @@
+#introduce,.port-list,.contact-input,footer .above{
+  display: flex;
+  flex-wrap: wrap;
+}
+@media screen and (min-width: 625px) {
+  .first{
+    order: 0;
+    width: 50%;
+  }
+  .second{
+    order: 1;
+    width: 50%;
+  }
+}
+@media screen and (min-width:768px) {
+  .scroll-top{
+    visibility: hidden;
+  }
+  nav{
+    float: right;
+    margin: 20px;
+  }
+}
+@media screen and (min-width: 1024px) {
+
+  .intro-text{
+    order: 0;
+    width: 70%;
+    text-align: right;
+  }
+  .intro-text hr{
+    margin-right: 0;
+  }
+  .person{
+    order: 1;
+    width: 30%;
+
+  }
+  .input{
+    order: 5;
+    width: 50%;
+  }
+  .contact-text{
+    order: 6;
+    width: 50%;
+  }
+  .scroll-top{
+    visibility: hidden;
+  }
+
+}
+@media screen and (min-width: 1048px) {
+section,.container{
+  width: 1048px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.port-list li{
+  max-width: 420px;
+  margin: 20px;
+}
+}

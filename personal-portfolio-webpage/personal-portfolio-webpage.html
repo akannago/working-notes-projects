@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>personal portfolio webpage</title>
+
+  <!-- Bootstrap -->
+  <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+  <link rel="stylesheet" type="text/css" href="main.css">
+  <link rel="stylesheet" type="text/css" href="responsive.css">
+
+  <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+  <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.2/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+
+<body translate="no">
+  <header class="navbar nav navbar-default navbar-fixed-top" id="banner" style="top: 0px;">
+    <div class="container">
+      <a href="#top"><img  src="http://qlip.in/images/qlip.png" alt="qlip | UI/UX Design and Development" title="qlip | UI/UX Design and Development">
+      </a>
+      <button class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target="#navbar" aria-expanded="false">
+			<span class="sr-only">切换导航</span>
+			<span class="icon-bar"></span>
+			<span class="icon-bar"></span>
+			<span class="icon-bar"></span>
+		  </button>
+      <nav class="navbar-collapse collapse" id="navbar" role="navigation" aria-expanded="false" >
+        <ul class="nav navbar-nav navbar-right">
+          <li class="active nav-items"><a class="scrollable" href="#top">About</a></li>
+          <li class="nav-items"><a class="scrollable" href="#portfolio">Portfolio</a></li>
+          <li class="nav-items"><a class="scrollable" href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <main>
+    <section id="introduce">
+      <div class="intro-text">
+        <p>Front-End Developer and UX/UI designer, with practical experience in project management, branding strategy, and creative direction; devoted to functional programming and information architecture.</p>
+        <!--当页面超过块级元素的设定大小时，保持页面居中对齐可以通过设置左右外边界为auto-->
+        <hr>
+        <!--默认情况下，显示出的线条为水平分割线的上边界，通过更改边界样式可以完成对分割线样式的设定-->
+        <p>Web Developer - User Experience Designer - Graphic Artist</p>
+      </div>
+      <img class="person" src="http://qlip.in/images/avatar.jpg" alt="A picture of Justin looking at San Francisco from across the Golden Gate Bridge." title="A picture of Justin looking at San Francisco from across the Golden Gate Bridge.">
+      <!--图片为内联元素，需将其转化为块级元素才能通过设置外边界来使其页面居中-->
+    </section>
+    <section id="portfolio">
+      <!--同级块级元素间的空隙可通过设置元素内边距来填充-->
+      <h2 class="section-title">portfolio</h2>
+      <hr>
+      <ul class="port-list">
+        <li><img class="img-responsive port-img" src="http://qlip.in/images/YMCA-Realtor-Donation-3.jpg" alt=""></li>
+        <li><img class="img-responsive port-img" src="http://qlip.in/images/YMCA-Realtor-Donation-3.jpg" alt=""></li>
+        <li><img class="img-responsive port-img" src="http://qlip.in/images/YMCA-Realtor-Donation-3.jpg" alt=""></li>
+        <li><img class="img-responsive port-img" src="http://qlip.in/images/YMCA-Realtor-Donation-3.jpg" alt=""></li>
+        <li><img class="img-responsive port-img" src="http://qlip.in/images/YMCA-Realtor-Donation-3.jpg" alt=""></li>
+
+      </ul>
+
+    </section>
+    <section id="contact">
+      <h2 class="section-title">contact me</h2>
+      <hr>
+      <div class="contact-input">
+        <form class="input">
+          <div class="form-group">
+            <label for="name"></label>
+            <input type="text" class="form-control" id="name" placeholder="Name">
+          </div>
+          <div class="form-group">
+            <label for="email"></label>
+            <input type="email" class="form-control" id="email" placeholder="Email-Address">
+          </div>
+          <div class="form-group">
+            <label for="phone"></label>
+            <input type="tel" class="form-control" id="phone" placeholder="Phone Number">
+          </div>
+          <textarea name="message" rows="5" placeholder="Message"></textarea>
+          <br>
+          <button type="submit" name="send">send</button>
+
+        </form>
+        <div class="contact-text">
+          <p>Want to get in touch with me? Be it to request more info about myself or my experience, to ask for my resume, tips on how to solve your sudoku, random questions about the universe and the meaning of life, or even if only for some nice Fika here
+            in stunning Toronto... just feel free to drop me a line anytime.</p>
+          <p>I promise to reply A.S.A.P.</p>
+          <p>Note: No spam/soliciting pour moi, merci :)</p>
+        </div>
+      </div>
+    </section>
+    <div class="scroll-top"><a class="button scrollable" href="#top"><i class="fa fa-chevron-up"></i></a></div>
+  </main>
+  <footer>
+    <div class="above">
+      <div class="relevant first">
+        <h3>ABOUT THIS PAGE</h3>
+        <p>Made with <i class="fa fa-coffee"></i> and <i cass="fa fa-music"></i> by <a href="#">Justin Sane</a>.</p>
+      </div>
+      <div class="relevant second">
+        <h3>AROUND THE WEB</h3>
+        <ul>
+          <li>
+            <a class="button social" href="#">
+              <i class="fa fa-github" aria-hidden="true"></i>
+            </a>
+          </li>
+          <li>
+            <a class="button social" href="#">
+              <i class="fa fa-linkedin" aria-hidden="true"></i>
+            </a>
+          </li>
+          <li>
+            <a class="button social" href="#">
+              <i class="fa fa-flickr" aria-hidden="true"></i>
+            </a>
+          </li>
+          <li>
+            <a class="button social" href="#">
+              <i class="fa fa-twitter" aria-haspopup="true"></i>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="below">
+      qlip © 2017. All Rights Reversed
+    </div>
+
+  </footer>
+
+
+
+  <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+  <script src="http://cdn.bootcss.com/jquery/1.11.1/jquery.min.js"></script>
+  <!-- Include all compiled plugins (below), or include individual files as needed -->
+  <script src="http://cdn.bootcss.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+</body>
+
+
+</html>
