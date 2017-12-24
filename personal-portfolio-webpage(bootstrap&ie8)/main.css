@@ -1,0 +1,180 @@
+header, nav,footer, section, div {
+  box-sizing: border-box;
+}
+
+body{
+  background-color:rgb(83, 81, 82);
+
+}
+main{
+  margin-top: 80px;
+}
+
+ul{
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+/*页面顶部导航栏*/
+#banner{
+  background-color:rgb(117, 42, 96);
+  height: 80px;
+  border: 0;
+  box-shadow: 0px 2px 2px 1px ;
+  behavior: url(PIE.htc);
+}
+a{
+  text-decoration: none;
+  color: rgb(117, 42, 96);
+}
+.nav img{
+  height: 50px;
+  margin: 15px;
+
+}
+.navbar-toggle{
+  margin: 20px;
+}
+/*导航栏展开条目*/
+#navbar{
+  background-color: rgb(117, 42, 96);
+  margin: 0;
+}
+#navbar ul{
+  text-align: center;
+}
+.nav li{
+  display: inline-block;
+  text-transform: uppercase;
+}
+/*页面主体分为三个部分，介绍、项目、联系方式*/
+section{
+  background-color: #eee;
+  padding: 20px 0;
+
+}
+#introduce{
+  background-color: #aaa;
+  padding: 50px;
+  text-align: center;
+}
+
+.intro-text{
+  color: white;
+  text-align: center;
+  padding: 20px;
+  font-weight: normal;
+  font-size: 20px;
+}
+hr{
+  max-width: 500px;
+  border-top: 5px solid white;
+
+}
+#introduce img{
+  width:250px;
+  height: 100%;
+  max-width: 80%;
+  border-radius: 50%;
+  behavior: url(PIE.htc);
+}
+.section-title{
+  text-align: center;
+  font-family:sans-serif;
+  font-size: 30px;
+  font-weight: bold;
+  padding: 20px;
+  text-transform: uppercase;
+  color: rgb(101, 102, 105);
+  width: 100%;
+
+}
+
+#portfolio hr,#contact hr{
+  border-top: 5px solid rgb(101, 102, 105);
+}
+
+.port-list{
+  margin:50px auto;
+  max-width: 90%;
+}
+.port-list li{
+
+  margin: 20px auto;
+}
+.port-list li img{
+
+  margin: 0 auto;
+}
+.contact-text,.input{
+  padding: 20px;
+}
+.form-group{
+  padding-bottom: 5px;
+  border-bottom: 1px solid rgb(101, 102, 105);
+}
+.form-control,textarea{
+  border: none;
+  outline: none;
+  background:none;
+  font-size: 1.5em;
+}
+textarea{
+  border-bottom:1px solid rgb(101, 102, 105);
+  width: 100%
+}
+#contact button{
+  margin: 20px 0;
+}
+
+#contact p{
+
+  font-weight: normal;
+
+}
+.scroll-top{
+  z-index: 1000;
+  position: fixed;
+  visibility: visible;
+  bottom: 2%;
+  right: 2%;
+}
+.scroll-top a{
+  background-color:rgb(117, 42, 96);
+}
+.scroll-top a:focus {
+    color: rgb(117, 42, 96);
+    background-color: #bbb;
+    border-color: rgb(117, 42, 96);
+  }
+.above{
+  background-color:rgb(143, 139, 138);
+  padding: 20px 0;
+  text-align: center;
+}
+.relevant{
+  color: white;
+}
+.relevant li{
+  display: inline-block;
+}
+.button{
+  color: white;
+  padding: 5px;
+  border: 2px solid white;
+  behavior: url(PIE.htc);
+  border-radius: 50%;
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+  line-height: 40px;
+  text-align: center;
+
+}
+
+.below{
+  background-color:rgb(117, 42, 96);
+  padding: 10px 0;
+  color: white;
+  text-align: center;
+}

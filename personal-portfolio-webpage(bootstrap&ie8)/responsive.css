@@ -1,0 +1,22 @@
+@media screen and (min-width:768px) {
+  .scroll-top{
+    visibility: hidden;
+  }
+  #navbar{
+    float: right;
+    margin: 20px;
+  }
+}
+@media screen and (min-width: 1024px) {
+
+  .intro-text{
+    text-align: right;
+  }
+  .intro-text hr{
+    margin-right: 0;
+  }
+
+}
+@media screen and (min-width: 1200px) {
+
+}
