@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Build a Random Quote Machine</title>
+
+  <!-- Bootstrap -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="main.css">
+
+
+  <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+  <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.2/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+
+<body>
+  <div class="quote">
+    <div class="quote-text" style="opacity:1">
+      <i class="fa fa-quote-left"> </i>
+      <span id="text">I think 'Hail to the Chief' has a nice ring to it.</span>
+
+    </div>
+    <div class="quote-author" style="opacity:0.8">
+      - <span id="author">John F. Kennedy</span>
+
+    </div>
+    <div class="buttons">
+      <a class="button" id="twitter" href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+      <a class="button" id="tumblr" href="#"><i class="fa fa-tumblr" aria-hidden="true"></i></a>
+      <button class="button" type="button" id="new-quote" name="new quote">new quote</button>
+    </div>
+  </div>
+
+  <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <!-- Include all compiled plugins (below), or include individual files as needed -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+  <script src="jquery.color.js"></script>
+  <script type="text/javascript">
+    var colors = ['#16a085', '#27ae60', '#2c3e50', '#f39c12', '#e74c3c', '#9b59b6', '#FB6964', '#342224', '#472E32', '#BDBB99', '#77B1A9', '#73A857'];
+    var quotes = [
+        {author: "Charles Bernstein", quote: "The combination of low culture and high technology is one of the most fascinating social features of the video game phenomenon. Computers were invented as super drones to do tasks no human in her or his right mind (much less left brain) would have the patience, or the perseverance, to manage. Now our robot drones, the ones designed to take all the boring jobs, become the instrument for libidinal extravaganzas devoid of any socially productive component. Video games are computers neutered of purpose, liberated from functionality. The idea is intoxicating; like playing with the help on their night off."},
+        {author: "John D. Carmack", quote: "Story in a game is like a story in a porn movie. It\'s expected to be there, but it\'s not that important."},
+        {author: "Barack Obama", quote: "It's tough to \"buy American\" when a video game sold by a U.S. company has been developed by Japanese software engineers and packaged in Mexico."},
+        {author: "Heather Chaplin & Aaron Ruby", quote: "Show me your children\'s games, and I will show you the next hundred years."},
+        {author: "Sid Meier", quote: "In a way, trying to impress people with design or personality or whatever works to promote movies doesn't work with games because it takes the focus off the player who is supposed to be the star. The more the player is the star, the better a game you have."},
+        {author: 'Half Life 2', quote: "The right man in the wrong place can make all the difference in the world."},
+        {author: "Bioshock", quote: "Is a man not entitled to the sweat of his brow?"},
+        {author: "Duke Nukem", quote: "It's time to kick ass and chew bubble gum, and I'm all out of gum."},
+        {author: "The Legend of Zelda", quote: "It’s dangerous to go alone; take this!"}
+    ];
+    function openURL(url){
+      window.open(url,'share');
+    }
+    var currentQuote = '',
+      currentAuthor = '';
+
+    function getNew() {
+      var num= Math.floor(Math.random() * quotes.length);
+      $(".quote-text").animate({opacity:0}, 500,function(){
+        $("#text").text(quotes[num].quote);
+        $(this).animate({opacity:1}, 500);
+
+      });
+      $(".quote-author").animate({opacity:0}, 500,function(){
+        $('#author').text(quotes[num].author);
+        $(this).animate({opacity:0.8}, 500);
+      });
+      var color = Math.floor(Math.random() * colors.length);
+      $('body').animate({
+        backgroundColor: colors[color],
+        color: colors[color]
+      }, 1000);
+      $('.button').animate({
+        backgroundColor: colors[color]
+      }, 1000);
+
+    }
+
+    $(document).ready(function() {
+      $("#new-quote").on('click', getNew);
+
+      $("#twitter").on('click', function() {
+          openURL('https://twitter.com/intent/tweet?hashtags=quotes&related=freecodecamp&text=' + encodeURIComponent('"' + currentQuote + '" ' + currentAuthor));
+
+        });
+      $("#tumblr").on('click', function() {
+
+          openURL('https://www.tumblr.com/widgets/share/tool?posttype=quote&tags=quotes,freecodecamp&caption=' + encodeURIComponent(currentAuthor) + '&content=' + encodeURIComponent(currentQuote) +
+            '&canonicalUrl=https%3A%2F%2Fwww.tumblr.com%2Fbuttons&shareSource=tumblr_share_button');
+
+        });
+          });
+  </script>
+</body>
+
+</html>
