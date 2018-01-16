@@ -60,8 +60,8 @@
     function openURL(url){
       window.open(url,'share');
     }
-    var currentQuote = '',
-      currentAuthor = '';
+    var currentQuote = document.getElementById("text").innerHTML,
+      currentAuthor = document.getElementById("author").innerHTML;
 
     function getNew() {
       var num= Math.floor(Math.random() * quotes.length);
@@ -74,6 +74,8 @@
         $('#author').text(quotes[num].author);
         $(this).animate({opacity:0.8}, 500);
       });
+      currentQuote = quotes[num].quote;
+      currentAuthor = quotes[num].author;
       var color = Math.floor(Math.random() * colors.length);
       $('body').animate({
         backgroundColor: colors[color],
